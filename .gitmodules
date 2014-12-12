@@ -1,0 +1,6 @@
+[submodule "src/gopkg.in/mgo.v2"]
+	path = src/gopkg.in/mgo.v2
+	url = https://github.com/go-mgo/mgo.git
+[submodule "src/github.com/wsxiaoys/terminal"]
+	path = src/github.com/wsxiaoys/terminal
+	url = https://github.com/wsxiaoys/terminal

@@ -1,0 +1,11 @@
+repo
+pkg
+bin
+
+ui/node_modules
+ui/bower_components
+ui/public
+
+npm-debug.log
+
+nohup.out
