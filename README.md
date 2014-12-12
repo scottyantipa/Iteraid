@@ -1,7 +1,10 @@
 # Iteraid
 #### *The aid to software iteration*
 
-Iteraid builds and serves multiple versions of your web app so you can always see a live version of the branches you are working on.
+Iteraid lets you and anyone working on your web application view a live version of that app for every outstanding git branch.  This lets you iterate crazy fast.  No more pulling/building code all the time just to see someone's changes. Just open your browser, go to your iteraid instance, and click on the branch name and you've got a live app.  Athletes use Gatorade, developers use Iteraid.
+
+
+It requires a web application that can be served as a static, single page app.  It works by building that version of the application, then setting up a dedicated static server which serves that version of the app on a new port.
 
 ### Dependencies
 1. Golang, with a GOPATH including this Iteraid directory
