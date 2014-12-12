@@ -35,8 +35,8 @@ Iteraid requires a web application that can be served as a static, single page a
 ### You must build both the server and the client
 
 First install Go deps
-$ go get github.com/wsxiaoys/terminal
-$ go get gopkg.in/mgo.v2
+  1. $ go get github.com/wsxiaoys/terminal
+  2. $ go get gopkg.in/mgo.v2
 
 
 To build both client and server
@@ -52,5 +52,4 @@ To build both client and server
 To watch/recompile UI files
   1. $ cd ui
   2. $ make watch
-
 
