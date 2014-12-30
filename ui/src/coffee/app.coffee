@@ -1,8 +1,8 @@
 # Top level app component
-Chrome = require './chrome'  # Render a chrome
-BranchList = require './branchList'  # Render a list of branches
-BranchPage = require './branchPage'
-Help = require './help'
+Chrome = require './chrome.coffee'  # Render a chrome
+BranchList = require './branchList.coffee'  # Render a list of branches
+BranchPage = require './branchPage.coffee'
+Help = require './help.coffee'
 module.exports = App = React.createClass
 
 	getInitialState: ->

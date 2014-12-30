@@ -9,3 +9,6 @@ ui/public
 npm-debug.log
 
 nohup.out
+
+.DS_Store
+src/.DS_Store

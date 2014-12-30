@@ -34,11 +34,6 @@ Iteraid requires a web application that can be served as a static, single page a
 
 ### You must build both the server and the client
 
-First install Go deps
-  1. $ go get github.com/wsxiaoys/terminal
-  2. $ go get gopkg.in/mgo.v2
-
-
 To build both client and server
   1. git clone git@git.soma.salesforce.com:santipa/Iteraid.git
   2. cd Iteraid

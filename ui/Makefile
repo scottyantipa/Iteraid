@@ -3,6 +3,9 @@ GULP=./node_modules/gulp/bin/gulp.js
 all:
 	@$(GULP) default
 
+js:
+	@$(GULP) jsSrc
+
 install:
 	npm install
 	bower install

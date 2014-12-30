@@ -1,24 +1,33 @@
 gulp = require 'gulp'
-browserify = require 'gulp-browserify'
+browserify = require 'browserify'
 concat = require 'gulp-concat'
-coffee = require 'gulp-coffee'
+coffeeify = require 'coffeeify'
 plumber = require 'gulp-plumber'
 stylus = require 'gulp-stylus'
 clean = require 'gulp-clean'
-runSequence = require 'run-sequence'
+reactify = require 'reactify'
+transform = require 'vinyl-transform'
+rename = require 'gulp-rename'
 
 gulp.task 'clean', ->
 	gulp.src "./public/**/*.*", read: false
 		.pipe plumber()
 		.pipe clean()
 
-# source coffee script
 gulp.task 'jsSrc', ->
-	gulp.src ['./src/coffee/start.coffee'], read: false
+	browserifyCoffeeReact = ->
+		transform (file) ->
+			browserify debug: false
+				.add file
+				.transform coffeeify
+				.transform everything: true, reactify
+				.bundle()
+
+	gulp.src './src/coffee/start.coffee'
 		.pipe plumber()
-		.pipe browserify debug: false, transform: ['coffeeify', 'reactify/undoubted'], extensions: ['.coffee']
+		.pipe browserifyCoffeeReact()
 		.pipe concat 'app.js'
-		.pipe gulp.dest './public/js'
+		.pipe gulp.dest 'public/js/'
 
 # dependency javascripts (unminified for now)
 jsDepNames = [
